@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "popcommon.swiftpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NewChromantics/PopCommon.SwiftPackage",
+      "state" : {
+        "revision" : "75e8c0fa95904c0c7265457971e43bc96c84c0a0",
+        "version" : "0.0.7"
+      }
+    },
+    {
+      "identity" : "rive-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rive-app/rive-ios",
+      "state" : {
+        "revision" : "59174c443afa81d7c3a5bf1baccbc84bb0136ee1",
+        "version" : "6.5.7"
+      }
+    }
+  ],
+  "version" : 2
+}
