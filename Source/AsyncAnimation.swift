@@ -7,9 +7,9 @@ open class AsyncAnimation : RiveViewModel
 	var finishedPromise = Promise<Bool>()
 	var allowDismissWithClick = false
 	
-	public init(_ filename:String,artboardName:String="Artboard")
+	public init(_ filename:String,bundle:Bundle=Bundle.main,artboardName:String="Artboard")
 	{
-		super.init(fileName: filename,artboardName: artboardName)
+		super.init(fileName: filename,in:bundle,artboardName: artboardName)
 	}
 	
 	@ViewBuilder func someView() -> some View
