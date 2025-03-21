@@ -7,9 +7,13 @@ open class AsyncAnimation : RiveViewModel
 	var finishedPromise = Promise<Bool>()
 	var allowDismissWithClick = false
 	
-	public init(_ filename:String,bundle:Bundle=Bundle.main,artboardName:String="Artboard")
+	public init(_ filename:String,bundle:Bundle=Bundle.main,artboardName:String="Artboard") throws
 	{
-		super.init(fileName: filename,in:bundle,artboardName: artboardName)
+		//	rive runtime brings down the app if the filename is missing from the bundle,
+		//	so setup the model ourselves (and dont use try!)
+		//super.init(fileName: filename,in:bundle,artboardName: artboardName)
+		let model = try RiveModel(fileName: filename, extension:"riv", in: bundle)
+		super.init(model,artboardName: artboardName)
 	}
 	
 	@ViewBuilder func someView() -> some View
